@@ -37,7 +37,7 @@ CentOs & Fedora
 
     $ doit finish that thing I started.
 
-You can give your items subjects by appending "-your_subject" to
+You can give your items subjects by prepending "-your_subject" to
 your message. Create a message with the subject "work":
 
     $ doit -work finish that thing I started.
@@ -49,8 +49,9 @@ default "general" subject.
 
     $ dowhat
 
-This will bring up the interactive command line interface:
-
+This will bring up the interactive command line interface. It launches
+in an attached screen session to remain completely seperate from your
+normal console. 
 
              _         _ _     _   ___                        ___ 
             | |       (_) |   | | |  _|                      |_  |
@@ -60,10 +61,10 @@ This will bring up the interactive command line interface:
          \__,_|\___/  |_|\__| (_) |___|                      |___|
         __________________________________________________________                                 
     
-       school | => [ ] study for the big test
+       school | => [*] study for the big test
       general |    [ ] go to the grocery store
          work |    [ ] get started on that project
-       school |    [ ] buy the course reader
+       school |    [*] buy the course reader
       general |    [ ] clean up around the house
          work |    [ ] ask about getting a raise
        school |    [ ] go in to office hours
@@ -72,3 +73,37 @@ This will bring up the interactive command line interface:
 
 
         __________________________________________________________
+
+Here you can see all your list items, and toggle their completion 
+status. Items that are saved while toggled on will be removed from 
+list.
+
+You may also filter your list items by subject with:
+
+    $ dowhat your_subject
+
+For example:
+
+    $ dowhat school
+
+             _         _ _     _   ___                        ___ 
+            | |       (_) |   | | |  _|                      |_  |
+          __| | ___    _| |_  | | | |    w - UP    q - QUIT    | |
+         / _` |/ _ \  | | __| | | | |    s - DOWN  e - S & Q   | |
+        | (_| | (_) | | | |_  |_| | |_     space - TOGGLE     _| |
+         \__,_|\___/  |_|\__| (_) |___|                      |___|
+        __________________________________________________________                                 
+    
+       school | => [*] study for the big test
+       school |    [*] buy the course reader
+       school |    [ ] go in to office hours
+
+
+
+
+
+
+
+
+        __________________________________________________________
+
