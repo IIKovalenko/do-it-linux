@@ -31,6 +31,8 @@ CentOs & Fedora
     $ git clone https://github.com/nickmpaz/do-it.git
     $ cd do-it && ./install.sh
 
+The restart your terminal session.
+
 ## Usage
 
 ### Create list items with the "doit" command:
