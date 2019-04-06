@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+import sys
+from pathlib import Path
+
+LOG_NAME = str(Path(__file__).parent) + "/doItLog.txt"
+NO_MESSAGE = "there is no message"
+args = sys.argv
+args.pop(0)
+subject = ""
+message = ""
+
+#check for blank message
+if len(args) == 0:
+    print(NO_MESSAGE)
+    sys.exit()
+
+#check for "-" in first word
+if args[0][0] == "-":
+
+    #check for blank message
+    if len(args) == 1:
+        print(NO_MESSAGE)
+        sys.exit()
+
+    subject = args[0][1:]
+    args.pop(0)
+
+else:
+    
+    subject = "general"
+
+message = " ".join(args)
+
+#write subject + message to text file
+with open(LOG_NAME, "a") as text_file:
+    text_file.write(subject + " " + message + "\n")
+
+print("task added (" + subject + ")")
