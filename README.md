@@ -1,7 +1,10 @@
 # doIt
 
 doIt is a lightweight application for creating and managing to do list 
-items through a simple yet beautiful command line interface.
+items through a simple yet beautiful command line interface. It uses the Linux
+package Screen, to create the interactive interface in a way that doesn't 
+intrude on your terminal session. doIt is written completely with 
+vanilla Python.
 
 ## Requirements
 
