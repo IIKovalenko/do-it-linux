@@ -25,7 +25,7 @@ Ubuntu & Debian
 
     $ sudo apt install screen
 
-CentOs & Fedora
+CentOS & Fedora
 
     $ sudo yum install screen
 
