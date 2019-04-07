@@ -88,6 +88,8 @@ For example:
 
     $ dowhat school
 
+Will bring up:
+
              _         _ _     _   ___                        ___ 
             | |       (_) |   | | |  _|                      |_  |
           __| | ___    _| |_  | | | |    w - UP    q - QUIT    | |
