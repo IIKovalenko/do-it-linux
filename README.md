@@ -31,7 +31,7 @@ CentOs & Fedora
     $ git clone https://github.com/nickmpaz/do-it.git
     $ cd do-it && ./install.sh
 
-The restart your terminal session.
+Then restart your terminal session.
 
 ## Usage
 
@@ -94,7 +94,7 @@ For example:
          / _` |/ _ \  | | __| | | | |    s - DOWN  e - S & Q   | |
         | (_| | (_) | | | |_  |_| | |_     space - TOGGLE     _| |
          \__,_|\___/  |_|\__| (_) |___|                      |___|
-        __________________________________________________________                                 
+        __________________________________________________________                             
     
        school | => [*] study for the big test
        school |    [*] buy the course reader
