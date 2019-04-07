@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 
-import sys, termios, tty, os, time, subprocess, copy
-from pathlib import Path
-
+import sys, termios, tty, os, time, subprocess, copy, pathlib
+from os.path import expanduser
 
 #if not running in screen session, run in screen then exit
 batcmd="echo \"$STY\""
@@ -15,7 +14,11 @@ if not "doit" in result:
 #globals
 MAX_HEIGHT = 11
 MID_HEIGHT = int(MAX_HEIGHT / 2)
-LOG_NAME = str(Path(__file__).parent) + "/doItLog.txt"
+DIR_NAME = expanduser("~") + "/doit/"
+LOG_NAME = "doItLog.txt"
+
+#if log doesn't exist, make it
+pathlib.Path(DIR_NAME).mkdir(parents=True, exist_ok=True) 
 
 #init
 focus = 0
@@ -36,14 +39,16 @@ def topBanner():
 
 
 def readLines():
-    with open(LOG_NAME, "r") as f:
-        content = f.readlines()
-    content = [x.strip() for x in content] 
-    dictionary = []
-    for c in content:
-        dictionary.append([c, False])
-    return dictionary
-
+    try:
+        with open(DIR_NAME + LOG_NAME, "r+") as f:
+            content = f.readlines()
+        content = [x.strip() for x in content] 
+        dictionary = []
+        for c in content:
+            dictionary.append([c, False])
+        return dictionary
+    except:
+        return []
 
 def makeLines():
   
@@ -141,10 +146,7 @@ def getch():
     return ch
 
 def save():
-    #go through initialLines. if line, write to log.
-    #if blank, check lines[0]. if lines[0] is True, skip. if false write to file
-    # pop lines[0]
-    with open(LOG_NAME, "w") as f:
+    with open(DIR_NAME + LOG_NAME, "w") as f:
         for line in startLines:
             if line[0] != "":
                 f.write(line[0] + "\n")
