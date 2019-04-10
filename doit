@@ -3,7 +3,7 @@ import sys
 import pathlib
 from os.path import expanduser
 
-DIR_NAME = expanduser("~") + "/doit/"
+DIR_NAME = expanduser("~") + "/.doit/"
 LOG_NAME = "doItLog.txt"
 NO_MESSAGE = "there is no message"
 args = sys.argv

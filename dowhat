@@ -14,7 +14,7 @@ if not "doit" in result:
 #globals
 MAX_HEIGHT = 11
 MID_HEIGHT = int(MAX_HEIGHT / 2)
-DIR_NAME = expanduser("~") + "/doit/"
+DIR_NAME = expanduser("~") + "/.doit/"
 LOG_NAME = "doItLog.txt"
 
 #if log doesn't exist, make it
