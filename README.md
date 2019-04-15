@@ -1,14 +1,14 @@
-# doIt
+# doIt - Linux
 
 doIt is a lightweight application for creating and managing to do list 
-items through a simple yet beautiful command line interface. It uses the Linux
-package Screen, to create the interactive interface in a way that doesn't 
+items through a simple yet beautiful command line interface. It uses 
+GNU Screen, to create the interactive interface in a way that doesn't 
 intrude on your terminal session. doIt is written completely with 
 vanilla Python.
 
 ## Requirements
 
-doIt is available for Linux and has two requirements:
+doIt has two requirements:
 
     -python3
     -Screen
@@ -28,6 +28,11 @@ Ubuntu & Debian
 CentOS & Fedora
 
     $ sudo yum install screen
+
+MacOS
+
+    $ sudo brew install screen
+    $ sudo brew install python3
 
 ## Installation
 
