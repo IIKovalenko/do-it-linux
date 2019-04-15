@@ -110,8 +110,8 @@ def clearLines():
 
     up = '\"\\033[A\"'
     clear = '\"\\033[K\"'
-    cmd = 'echo -n ' + '\r'
-    for i in range(MAX_HEIGHT):
+    cmd = 'echo ' + '\r'
+    for i in range(MAX_HEIGHT + 1):
         cmd = cmd + up + clear
     os.system(cmd)
 
